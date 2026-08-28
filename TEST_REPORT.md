@@ -6,6 +6,21 @@ Date: 2026-08-28
 
 Static GitHub Pages web application covering the Utility Deck, invoice/quotation maker, supplier comparison, PWA assets and the custom `u.iegy.net` configuration.
 
+## Automated validation
+
+GitHub Actions **Quality checks — run #1** completed successfully.
+
+The workflow validates the production repository on `main` and checks:
+
+- JavaScript syntax for `app.js`, all `ux-*.js` modules and `sw.js`.
+- Required production files.
+- `CNAME` = `u.iegy.net`.
+- CSS/JS references in `index.html`.
+- Requested developer credit in the footer.
+- PWA manifest JSON validity.
+
+Result: **PASS / success**.
+
 ## Completed checks
 
 ### Repository / deployment assets
@@ -17,15 +32,16 @@ Static GitHub Pages web application covering the Utility Deck, invoice/quotation
 - PASS — PWA manifest exists.
 - PASS — service worker cache list includes the expanded CSS/JS modules.
 - PASS — robots and sitemap files exist.
+- PASS — `.nojekyll` is present for direct static serving.
 
 ### JavaScript validation
 
-The newly added JavaScript modules were syntax-checked with Node.js:
-
-- PASS — `ux-core.js`
-- PASS — `ux-calc.js`
-- PASS — `ux-dev.js`
-- PASS — `ux-persist.js`
+- PASS — `app.js`.
+- PASS — `ux-core.js`.
+- PASS — `ux-calc.js`.
+- PASS — `ux-dev.js`.
+- PASS — `ux-persist.js`.
+- PASS — `sw.js`.
 
 ### Calculation smoke tests
 
