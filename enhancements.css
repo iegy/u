@@ -1,0 +1,14 @@
+/* U Utility Studio — expansion layer */
+.tool-filters{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;align-items:center;margin-top:12px;grid-column:1/-1}
+.filter-chip{appearance:none;border:1px solid var(--line);background:color-mix(in srgb,var(--surface) 88%,transparent);color:var(--muted);border-radius:999px;padding:8px 13px;font:inherit;font-size:.78rem;font-weight:800;cursor:pointer;transition:.18s ease;backdrop-filter:blur(10px)}
+.filter-chip:hover,.filter-chip.active{border-color:var(--ink);color:var(--ink);transform:translateY(-1px)}
+.filter-chip.active{background:var(--ink);color:var(--paper)}
+.enhanced-card{animation:toolReveal .36s both;position:relative;overflow:hidden}
+.enhanced-card::after{content:"+";position:absolute;inset-inline-end:12px;inset-block-end:9px;font-size:2.8rem;line-height:1;color:color-mix(in srgb,var(--ink) 5%,transparent);font-weight:900;pointer-events:none}
+@keyframes toolReveal{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+.enhanced-tool .tool-result pre,.enhanced-tool pre.tool-result{white-space:pre-wrap;overflow-wrap:anywhere;max-height:320px;overflow:auto}
+.enhanced-tool .tool-hint{font-size:.8rem;color:var(--muted);line-height:1.65;margin:.5rem 0 0}
+.tool-actions.wrap{flex-wrap:wrap}.install-app-btn{white-space:nowrap}
+@media (min-width:1180px){.tool-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.tool-card{min-height:168px}}
+@media (max-width:760px){.tool-filters{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}.tool-filters::-webkit-scrollbar{display:none}.filter-chip{flex:0 0 auto}.install-app-btn{display:none}}
+@media (prefers-reduced-motion:reduce){.enhanced-card{animation:none}.filter-chip{transition:none}}
