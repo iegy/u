@@ -25,6 +25,7 @@ jobs:
           node --check ux-dev.js
           node --check ux-persist.js
           node --check ux-studio.js
+          node --check ux-media-hotfix.js
           node --check sw.js
 
       - name: Required production files
@@ -33,6 +34,7 @@ jobs:
           test -f styles.css
           test -f enhancements.css
           test -f ux-studio.js
+          test -f ux-media-hotfix.js
           test -f manifest.webmanifest
           test -f icon.svg
           test -f logo.svg
@@ -51,6 +53,7 @@ jobs:
           grep -q 'ux-dev.js' index.html
           grep -q 'ux-persist.js' index.html
           grep -q 'ux-studio.js' ux-core.js
+          grep -q 'ux-media-hotfix.js' ux-core.js
           grep -q 'Designed &amp; Developed by Mohammed Hussein' index.html
 
       - name: Validate manifest JSON
