@@ -1,0 +1,54 @@
+name: Quality checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: JavaScript syntax
+        run: |
+          node --check app.js
+          node --check ux-core.js
+          node --check ux-calc.js
+          node --check ux-dev.js
+          node --check ux-persist.js
+          node --check sw.js
+
+      - name: Required production files
+        run: |
+          test -f index.html
+          test -f styles.css
+          test -f enhancements.css
+          test -f manifest.webmanifest
+          test -f icon.svg
+          test -f logo.svg
+          test -f CNAME
+          test -f robots.txt
+          test -f sitemap.xml
+          test "$(tr -d '\r\n' < CNAME)" = "u.iegy.net"
+
+      - name: Verify asset references
+        run: |
+          grep -q 'styles.css' index.html
+          grep -q 'enhancements.css' index.html
+          grep -q 'app.js' index.html
+          grep -q 'ux-core.js' index.html
+          grep -q 'ux-calc.js' index.html
+          grep -q 'ux-dev.js' index.html
+          grep -q 'ux-persist.js' index.html
+          grep -q 'Designed &amp; Developed by Mohammed Hussein' index.html
+
+      - name: Validate manifest JSON
+        run: node -e "JSON.parse(require('fs').readFileSync('manifest.webmanifest','utf8')); console.log('manifest OK')"
