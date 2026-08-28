@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="t d">
+  <title id="t">U Utility Studio</title>
+  <desc id="d">A bold U monogram inside an asymmetric utility tile with four orbiting tool dots.</desc>
+  <defs>
+    <linearGradient id="g" x1="84" y1="64" x2="432" y2="448" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#171a20"/>
+      <stop offset="1" stop-color="#0c0f14"/>
+    </linearGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000" flood-opacity=".2"/>
+    </filter>
+  </defs>
+  <path d="M111 51C181 16 359 17 424 76c65 59 65 254 10 330-55 75-251 93-337 27C12 368 19 96 111 51Z" fill="url(#g)" filter="url(#s)"/>
+  <path d="M154 147v121c0 94 43 139 105 139 65 0 111-48 111-142V147h-58v120c0 54-16 82-51 82-34 0-49-28-49-82V147h-58Z" fill="#F5F0E6"/>
+  <path d="M151 142h64" stroke="#D8FF63" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="395" cy="126" r="23" fill="#FF775F"/>
+  <circle cx="426" cy="208" r="14" fill="#74D8FF"/>
+  <circle cx="112" cy="333" r="18" fill="#AA91FF"/>
+  <circle cx="177" cy="425" r="12" fill="#7BE2B8"/>
+  <path d="M392 304c17-8 27-21 31-40" fill="none" stroke="#FFC85F" stroke-width="12" stroke-linecap="round"/>
+</svg>
