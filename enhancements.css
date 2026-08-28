@@ -1,8 +1,8 @@
 /* U Utility Studio — expansion layer */
 .tool-filters{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;align-items:center;margin-top:12px;grid-column:1/-1}
-.filter-chip{appearance:none;border:1px solid var(--line);background:color-mix(in srgb,var(--surface) 88%,transparent);color:var(--muted);border-radius:999px;padding:8px 13px;font:inherit;font-size:.78rem;font-weight:800;cursor:pointer;transition:.18s ease;backdrop-filter:blur(10px)}
+.filter-chip{appearance:none;border:1px solid var(--line);background:color-mix(in srgb,var(--panel) 88%,transparent);color:var(--muted);border-radius:999px;padding:8px 13px;font:inherit;font-size:.78rem;font-weight:800;cursor:pointer;transition:.18s ease;backdrop-filter:blur(10px)}
 .filter-chip:hover,.filter-chip.active{border-color:var(--ink);color:var(--ink);transform:translateY(-1px)}
-.filter-chip.active{background:var(--ink);color:var(--paper)}
+.filter-chip.active{background:var(--ink);color:var(--bg)}
 .enhanced-card{animation:toolReveal .36s both;position:relative;overflow:hidden}
 .enhanced-card::after{content:"+";position:absolute;inset-inline-end:12px;inset-block-end:9px;font-size:2.8rem;line-height:1;color:color-mix(in srgb,var(--ink) 5%,transparent);font-weight:900;pointer-events:none}
 @keyframes toolReveal{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
