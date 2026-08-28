@@ -1,5 +1,23 @@
 (()=>{'use strict';
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)],ar=()=>document.documentElement.lang!=='en',tr=(a,e)=>ar()?a:e,esc=(v='')=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+// Business Documents Studio updates the invoice preview after app.js rerenders it.
+// Only direct child changes need watching. A subtree observer would also observe
+// the studio's own badge/text mutations and can create an endless microtask loop.
+if(window.MutationObserver&&!window.__U_PREVIEW_OBSERVER_GUARD__){
+  const NativeMutationObserver=window.MutationObserver;
+  class UMutationObserver extends NativeMutationObserver{
+    observe(target,options){
+      if(target?.id==='invoicePreview'&&options?.childList&&options?.subtree){
+        return super.observe(target,{...options,subtree:false});
+      }
+      return super.observe(target,options);
+    }
+  }
+  window.MutationObserver=UMutationObserver;
+  window.__U_PREVIEW_OBSERVER_GUARD__=true;
+}
+
 const dlg=$('#toolDialog'),body=$('#dialogBody'),ttl=$('#dialogTitle'),grid=$('#toolGrid');if(!dlg||!body||!ttl||!grid)return;
 const toast=m=>{let e=$('#toast');if(!e)return;e.textContent=m;e.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove('show'),1600)};
 const copy=async s=>{try{await navigator.clipboard.writeText(s)}catch{let t=document.createElement('textarea');t.value=s;document.body.append(t);t.select();document.execCommand('copy');t.remove()}toast(tr('تم النسخ','Copied'))};
@@ -23,5 +41,5 @@ const cmap={image:'design',password:'secure',uuid:'dev',json:'dev',base64:'dev',
 const sw=$('.search-wrap');if(sw){let f=document.createElement('div');f.className='tool-filters';f.innerHTML=[['all','الكل','All'],['text','نصوص','Text'],['dev','مطور','Dev'],['money','ماليات','Money'],['calc','حسابات','Calc'],['time','وقت','Time'],['design','تصميم','Design'],['web','ويب','Web'],['secure','أمان','Secure'],['data','بيانات','Data']].map((x,i)=>`<button type="button" class="filter-chip ${i?'':'active'}" data-filter="${x[0]}" data-ar="${x[1]}" data-en="${x[2]}">${tr(x[1],x[2])}</button>`).join('');sw.parentElement.append(f);let active='all';const run=()=>{let q=($('#toolSearch')?.value||'').trim().toLowerCase();$$('.tool-card').forEach(c=>c.hidden=!((active==='all'||c.dataset.category===active)&&(!q||`${c.dataset.search||''} ${c.textContent}`.toLowerCase().includes(q))))};$$('.filter-chip',f).forEach(c=>c.onclick=()=>{active=c.dataset.filter;$$('.filter-chip',f).forEach(x=>x.classList.toggle('active',x===c));run()});$('#toolSearch')?.addEventListener('input',run)}
 $$('.enhanced-card').forEach(c=>c.onclick=()=>window.UX.handlers[c.dataset.extra]?.());let stat=$('.mini-stats span:first-child b');if(stat)stat.textContent=`${$$('.tool-card').length}+`;
 if('serviceWorker' in navigator){const reg=()=>navigator.serviceWorker.register('sw.js').catch(()=>{});if(document.readyState==='complete')reg();else window.addEventListener('load',reg,{once:true})}
-const studio=document.createElement('script');studio.src='ux-studio.js';studio.async=true;document.head.append(studio);
+const studio=document.createElement('script');studio.src='ux-studio.js?v=3';studio.async=true;document.head.append(studio);
 })();
