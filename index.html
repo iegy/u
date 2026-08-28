@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#101318" />
-  <meta name="description" content="U Utility Studio — أدوات ويب مجانية للصور والنصوص والمطورين، مع مولد فواتير وعروض أسعار ومقارنة عروض الموردين." />
+  <meta name="description" content="U Utility Studio — أدوات ويب مجانية للصور والنصوص والمطورين والحسابات، مع مولد فواتير وعروض أسعار ومقارنة عروض الموردين." />
   <meta name="robots" content="index,follow" />
   <meta property="og:title" content="U — Utility Studio" />
   <meta property="og:description" content="أدوات ويب يومية تعمل محليًا داخل المتصفح، مع فواتير وعروض أسعار ومقارنة موردين." />
@@ -15,6 +15,7 @@
   <link rel="manifest" href="manifest.webmanifest" />
   <title>U — Utility Studio</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="enhancements.css" />
 </head>
 <body>
   <div class="ambient ambient-a" aria-hidden="true"></div>
@@ -48,7 +49,7 @@
           <a class="secondary-btn" href="#invoice" data-ar="إنشاء فاتورة" data-en="Create invoice">إنشاء فاتورة</a>
         </div>
         <div class="mini-stats">
-          <span><b>14+</b><small data-ar="أداة محلية" data-en="local tools">أداة محلية</small></span>
+          <span><b>27+</b><small data-ar="أداة محلية" data-en="local tools">أداة محلية</small></span>
           <span><b>0</b><small data-ar="رفع ملفات" data-en="file uploads">رفع ملفات</small></span>
           <span><b>100%</b><small data-ar="مجاني" data-en="free">مجاني</small></span>
         </div>
@@ -129,5 +130,9 @@
   <dialog id="toolDialog" class="tool-dialog"><div class="dialog-shell"><div class="dialog-head"><div><span class="dialog-tag">LOCAL TOOL</span><h3 id="dialogTitle">Tool</h3></div><button type="button" id="closeDialog" class="icon-btn" aria-label="إغلاق">×</button></div><div id="dialogBody" class="dialog-body"></div></div></dialog>
   <div class="toast" id="toast" role="status" aria-live="polite"></div><div id="printArea" class="print-area" aria-hidden="true"></div>
   <script src="app.js" defer></script>
+  <script src="ux-core.js" defer></script>
+  <script src="ux-calc.js" defer></script>
+  <script src="ux-dev.js" defer></script>
+  <script src="ux-persist.js" defer></script>
 </body>
 </html>
