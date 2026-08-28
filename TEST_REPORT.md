@@ -1,6 +1,7 @@
 # U Utility Studio — Test Report
 
 Date: 2026-08-28
+Version: 1.0.0 production foundation
 
 ## Scope
 
@@ -8,9 +9,9 @@ Static GitHub Pages web application covering the Utility Deck, invoice/quotation
 
 ## Automated validation
 
-GitHub Actions **Quality checks — run #1** completed successfully.
+GitHub Actions **Quality checks** has completed successfully through **run #6** on `main`.
 
-The workflow validates the production repository on `main` and checks:
+The workflow checks:
 
 - JavaScript syntax for `app.js`, all `ux-*.js` modules and `sw.js`.
 - Required production files.
@@ -33,6 +34,7 @@ Result: **PASS / success**.
 - PASS — service worker cache list includes the expanded CSS/JS modules.
 - PASS — robots and sitemap files exist.
 - PASS — `.nojekyll` is present for direct static serving.
+- PASS — changelog and README document the current release.
 
 ### JavaScript validation
 
@@ -56,27 +58,31 @@ Result: **PASS / success**.
 
 ### Functional implementation review
 
-- PASS — tool search remains available.
-- PASS — category filters are added without replacing the existing tools.
+- PASS — tool search and category filters are available.
+- PASS — `Ctrl/Cmd + K` focuses the tool search.
 - PASS — extended tools use the existing modal system.
 - PASS — invoice/quotation builder retains live preview, local draft, logo, tax, discount, extras and Print/PDF workflow.
+- PASS — invoice drafts can be exported to portable JSON and restored from JSON.
+- PASS — imported invoice backups are schema-checked, line-item-limited and size-limited before storage.
 - PASS — supplier comparison retains landed-cost ranking, CSV export and printable report.
-- PASS — supplier comparison now persists locally in the browser.
+- PASS — supplier comparison persists locally in the browser.
+- PASS — incomplete zero-price supplier rows are prevented from producing/exporting a misleading ranking.
 - PASS — Arabic/English and RTL/LTR hooks are retained.
 - PASS — light/dark theme hooks are retained.
 - PASS — QR Studio remains linked to `qr.iegy.net` rather than duplicating the existing QR project.
 - PASS — requested footer credit is present: `Designed & Developed by Mohammed Hussein · iegy.net`.
 
-## Browser verification still recommended after GitHub Pages deployment
+## Final live-browser verification
 
-A final live smoke test should be performed once `u.iegy.net` resolves to the GitHub Pages deployment. Check:
+The remaining verification is deployment-dependent and should be run once GitHub Pages is enabled for this repository and `u.iegy.net` resolves to it:
 
 1. desktop and mobile layout;
 2. every tool modal opens and closes;
-3. invoice Print / Save as PDF output;
-4. CSV download;
-5. service-worker update/offline behavior;
-6. browser PWA install prompt on a supported browser;
-7. custom-domain HTTPS certificate.
+3. invoice Print / Save as PDF output in Chrome/Edge/mobile;
+4. invoice JSON export/import round trip;
+5. supplier CSV download and print report;
+6. service-worker update/offline behavior;
+7. browser PWA install prompt on a supported browser;
+8. custom-domain HTTPS certificate.
 
 This repository contains no server-side application code, so there is no backend deployment or database migration to test.
