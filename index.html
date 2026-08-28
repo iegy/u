@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#101318" />
+  <meta name="description" content="U Utility Studio — أدوات ويب مجانية للصور والنصوص والمطورين، مع مولد فواتير وعروض أسعار ومقارنة عروض الموردين." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="U — Utility Studio" />
+  <meta property="og:description" content="أدوات ويب يومية تعمل محليًا داخل المتصفح، مع فواتير وعروض أسعار ومقارنة موردين." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://u.iegy.net/" />
+  <link rel="canonical" href="https://u.iegy.net/" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <title>U — Utility Studio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-a" aria-hidden="true"></div>
+  <div class="ambient ambient-b" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar shell">
+    <a class="brand" href="#home" aria-label="U Utility Studio">
+      <span class="brand-mark">U</span>
+      <span class="brand-copy"><b>Utility Studio</b><small data-ar="أدوات صغيرة، شغل كبير" data-en="Small tools. Serious work.">أدوات صغيرة، شغل كبير</small></span>
+    </a>
+    <nav class="nav-pills" aria-label="التنقل الرئيسي">
+      <a href="#tools" data-ar="الأدوات" data-en="Tools">الأدوات</a>
+      <a href="#invoice" data-ar="الفواتير" data-en="Invoices">الفواتير</a>
+      <a href="#compare" data-ar="الموردون" data-en="Suppliers">الموردون</a>
+    </nav>
+    <div class="top-actions">
+      <button class="ghost-btn" id="langBtn" type="button" aria-label="تغيير اللغة">EN</button>
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="تغيير المظهر">◐</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero shell section-anchor">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="spark">✦</span><span data-ar="خصوصية أولًا • بدون رفع ملفاتك" data-en="Privacy first • Your files stay local">خصوصية أولًا • بدون رفع ملفاتك</span></div>
+        <h1 data-ar="استوديو يومي للأدوات التي تحتاجها فعلًا." data-en="A daily studio for tools you actually use.">استوديو يومي للأدوات التي تحتاجها فعلًا.</h1>
+        <p data-ar="مجموعة أدوات تعمل داخل المتصفح، مولد فواتير وعروض أسعار، ومقارنة عروض الموردين — خفيفة، سريعة، ومجانية." data-en="Browser-first utilities, invoices and quotations, plus supplier offer comparison — fast, lightweight and free.">مجموعة أدوات تعمل داخل المتصفح، مولد فواتير وعروض أسعار، ومقارنة عروض الموردين — خفيفة، سريعة، ومجانية.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#tools"><span data-ar="ابدأ بالأدوات" data-en="Open tools">ابدأ بالأدوات</span><b>↗</b></a>
+          <a class="secondary-btn" href="#invoice" data-ar="إنشاء فاتورة" data-en="Create invoice">إنشاء فاتورة</a>
+        </div>
+        <div class="mini-stats">
+          <span><b>14+</b><small data-ar="أداة محلية" data-en="local tools">أداة محلية</small></span>
+          <span><b>0</b><small data-ar="رفع ملفات" data-en="file uploads">رفع ملفات</small></span>
+          <span><b>100%</b><small data-ar="مجاني" data-en="free">مجاني</small></span>
+        </div>
+      </div>
+
+      <div class="hero-orbit" aria-label="أقسام التطبيق">
+        <div class="orbit-ring orbit-one"></div>
+        <div class="orbit-ring orbit-two"></div>
+        <a class="orbit-node node-tools" href="#tools"><span>⌁</span><b data-ar="أدوات" data-en="Tools">أدوات</b></a>
+        <a class="orbit-node node-invoice" href="#invoice"><span>▤</span><b data-ar="فواتير" data-en="Invoices">فواتير</b></a>
+        <a class="orbit-node node-compare" href="#compare"><span>⇄</span><b data-ar="مقارنة" data-en="Compare">مقارنة</b></a>
+        <a class="orbit-node node-qr" href="https://qr.iegy.net/" target="_blank" rel="noopener"><span>⌗</span><b>QR</b></a>
+        <div class="orbit-core"><span>U</span><small data-ar="كل شيء في مكان واحد" data-en="One focused workspace">كل شيء في مكان واحد</small></div>
+      </div>
+    </section>
+
+    <section id="tools" class="tools-section shell section-anchor">
+      <div class="section-head">
+        <div>
+          <span class="kicker" data-ar="TOOL DECK" data-en="TOOL DECK">TOOL DECK</span>
+          <h2 data-ar="صندوق أدوات شامل" data-en="A complete utility deck">صندوق أدوات شامل</h2>
+          <p data-ar="معظم العمليات تتم محليًا على جهازك، بدون إرسال الملفات أو النصوص إلى خادم." data-en="Most operations happen locally on your device without sending files or text to a server.">معظم العمليات تتم محليًا على جهازك، بدون إرسال الملفات أو النصوص إلى خادم.</p>
+        </div>
+        <div class="search-wrap">
+          <input id="toolSearch" type="search" placeholder="ابحث عن أداة…" data-placeholder-ar="ابحث عن أداة…" data-placeholder-en="Search tools…" autocomplete="off" />
+          <span>⌕</span>
+        </div>
+      </div>
+
+      <div class="tool-grid" id="toolGrid">
+        <button class="tool-card accent-1" data-tool="image" data-search="صور image compress resize convert webp jpg png exif"><span class="tool-icon">◫</span><b data-ar="معمل الصور" data-en="Image Lab">معمل الصور</b><small data-ar="ضغط • تغيير مقاس • تحويل صيغة • إزالة EXIF" data-en="Compress • resize • convert • strip EXIF">ضغط • تغيير مقاس • تحويل صيغة • إزالة EXIF</small><em>LOCAL</em></button>
+        <button class="tool-card accent-2" data-tool="password" data-search="password كلمة مرور generate secure"><span class="tool-icon">✣</span><b data-ar="مولد كلمات مرور" data-en="Password Generator">مولد كلمات مرور</b><small data-ar="طول وتكوين مخصص مع مؤشر قوة" data-en="Custom length and character sets with strength">طول وتكوين مخصص مع مؤشر قوة</small><em>SECURE</em></button>
+        <button class="tool-card accent-3" data-tool="uuid" data-search="uuid guid random id معرف"><span class="tool-icon">#</span><b>UUID / GUID</b><small data-ar="توليد معرفات عشوائية بضغطة واحدة" data-en="Generate random identifiers instantly">توليد معرفات عشوائية بضغطة واحدة</small><em>DEV</em></button>
+        <button class="tool-card accent-4" data-tool="json" data-search="json format minify validate developer"><span class="tool-icon">{ }</span><b>JSON Studio</b><small data-ar="تنسيق • تصغير • تحقق من الصحة" data-en="Format • minify • validate">تنسيق • تصغير • تحقق من الصحة</small><em>DEV</em></button>
+        <button class="tool-card accent-5" data-tool="base64" data-search="base64 encode decode تشفير فك"><span class="tool-icon">B64</span><b>Base64</b><small data-ar="ترميز وفك ترميز النصوص UTF‑8" data-en="Encode and decode UTF‑8 text">ترميز وفك ترميز النصوص UTF‑8</small><em>TEXT</em></button>
+        <button class="tool-card accent-6" data-tool="hash" data-search="sha256 hash checksum بصمة"><span class="tool-icon">◇</span><b>SHA‑256</b><small data-ar="إنشاء بصمة SHA‑256 للنص" data-en="Generate SHA‑256 text fingerprints">إنشاء بصمة SHA‑256 للنص</small><em>DEV</em></button>
+        <button class="tool-card accent-2" data-tool="clean" data-search="text clean spaces lines trim تنظيف نص"><span class="tool-icon">≋</span><b data-ar="منظف النص" data-en="Text Cleaner">منظف النص</b><small data-ar="مسافات زائدة • أسطر فارغة • ترتيب سريع" data-en="Spaces • blank lines • quick cleanup">مسافات زائدة • أسطر فارغة • ترتيب سريع</small><em>TEXT</em></button>
+        <button class="tool-card accent-3" data-tool="counter" data-search="word count character counter words حروف كلمات"><span class="tool-icon">123</span><b data-ar="عداد النص" data-en="Text Counter">عداد النص</b><small data-ar="كلمات • حروف • أسطر • وقت قراءة" data-en="Words • characters • lines • read time">كلمات • حروف • أسطر • وقت قراءة</small><em>TEXT</em></button>
+        <button class="tool-card accent-1" data-tool="url" data-search="url encode decode uri link رابط"><span class="tool-icon">↗</span><b>URL Encode / Decode</b><small data-ar="ترميز وفك ترميز الروابط والنصوص" data-en="Encode and decode URLs and text">ترميز وفك ترميز الروابط والنصوص</small><em>WEB</em></button>
+        <button class="tool-card accent-4" data-tool="color" data-search="color hex rgb hsl لون تحويل"><span class="tool-icon">◉</span><b data-ar="محول الألوان" data-en="Color Converter">محول الألوان</b><small>HEX ↔ RGB + Preview</small><em>DESIGN</em></button>
+        <button class="tool-card accent-5" data-tool="timestamp" data-search="timestamp unix date time تاريخ وقت epoch"><span class="tool-icon">◷</span><b>Unix Timestamp</b><small data-ar="الوقت الحالي وتحويل التاريخ من وإلى Unix" data-en="Current time and Unix/date conversion">الوقت الحالي وتحويل التاريخ من وإلى Unix</small><em>DEV</em></button>
+        <button class="tool-card accent-6" data-tool="case" data-search="case uppercase lowercase title sentence text تحويل حالة الحروف"><span class="tool-icon">Aa</span><b data-ar="تحويل حالة النص" data-en="Text Case">تحويل حالة النص</b><small>UPPER • lower • Title • Sentence</small><em>TEXT</em></button>
+        <button class="tool-card accent-3" data-tool="percent" data-search="percentage percent calculator نسبة مئوية حساب"><span class="tool-icon">%</span><b data-ar="حاسبة النسبة" data-en="Percentage Calculator">حاسبة النسبة</b><small data-ar="نسبة من رقم • فرق نسبي • زيادة/خصم" data-en="Percent of • change • increase/discount">نسبة من رقم • فرق نسبي • زيادة/خصم</small><em>MATH</em></button>
+        <button class="tool-card accent-1" data-tool="datediff" data-search="date difference age days تاريخ فرق عمر أيام"><span class="tool-icon">⌚</span><b data-ar="فرق التاريخ" data-en="Date Difference">فرق التاريخ</b><small data-ar="الفرق بين تاريخين بالأيام والأسابيع" data-en="Difference between two dates in days and weeks">الفرق بين تاريخين بالأيام والأسابيع</small><em>TIME</em></button>
+        <a class="tool-card accent-qr external-card" href="https://qr.iegy.net/" target="_blank" rel="noopener" data-search="qr code باركود كيو ار"><span class="tool-icon">⌗</span><b>iEgy QR Studio</b><small data-ar="منتج QR مستقل موجود بالفعل — افتحه مباشرة" data-en="Your existing standalone QR product — open it directly">منتج QR مستقل موجود بالفعل — افتحه مباشرة</small><em>EXTERNAL ↗</em></a>
+      </div>
+    </section>
+
+    <section id="invoice" class="work-section shell section-anchor">
+      <div class="section-head compact-head"><div><span class="kicker">DOCUMENT MAKER</span><h2 data-ar="مولد الفواتير وعروض الأسعار" data-en="Invoice & quotation maker">مولد الفواتير وعروض الأسعار</h2><p data-ar="أنشئ مستندًا احترافيًا واحفظ مسودتك محليًا ثم اطبعه أو احفظه PDF." data-en="Build a polished document, save the draft locally, then print or export as PDF.">أنشئ مستندًا احترافيًا واحفظ مسودتك محليًا ثم اطبعه أو احفظه PDF.</p></div></div>
+      <div class="workspace invoice-workspace">
+        <form id="invoiceForm" class="editor-panel" autocomplete="off">
+          <div class="panel-title"><span>01</span><b data-ar="بيانات المستند" data-en="Document details">بيانات المستند</b></div>
+          <div class="form-grid two"><label><span data-ar="النوع" data-en="Type">النوع</span><select id="docType"><option value="invoice">فاتورة / Invoice</option><option value="quote">عرض سعر / Quotation</option></select></label><label><span data-ar="رقم المستند" data-en="Document no.">رقم المستند</span><input id="docNo" value="INV-001" /></label><label><span data-ar="التاريخ" data-en="Date">التاريخ</span><input id="docDate" type="date" /></label><label><span data-ar="العملة" data-en="Currency">العملة</span><select id="currency"><option>EGP</option><option>USD</option><option>AED</option><option>SAR</option><option>EUR</option><option>GBP</option></select></label></div>
+          <div class="panel-title"><span>02</span><b data-ar="من وإلى" data-en="From & to">من وإلى</b></div>
+          <div class="form-grid two"><label><span data-ar="اسم شركتك" data-en="Your company">اسم شركتك</span><input id="companyName" placeholder="Company name" /></label><label><span data-ar="اسم العميل" data-en="Client name">اسم العميل</span><input id="clientName" placeholder="Client name" /></label><label><span data-ar="بيانات شركتك" data-en="Company details">بيانات شركتك</span><textarea id="companyDetails" rows="3" placeholder="Phone • Email • Tax No."></textarea></label><label><span data-ar="بيانات العميل" data-en="Client details">بيانات العميل</span><textarea id="clientDetails" rows="3" placeholder="Phone • Email • Address"></textarea></label><label class="file-label span-2"><span data-ar="لوجو اختياري" data-en="Optional logo">لوجو اختياري</span><input id="logoInput" type="file" accept="image/*" /><small data-ar="يحفظ داخل المسودة على هذا الجهاز فقط." data-en="Stored only in this browser draft.">يحفظ داخل المسودة على هذا الجهاز فقط.</small></label></div>
+          <div class="panel-title"><span>03</span><b data-ar="البنود" data-en="Line items">البنود</b><button type="button" class="mini-btn" id="addItemBtn">+ <span data-ar="إضافة بند" data-en="Add item">إضافة بند</span></button></div>
+          <div class="items-editor" id="itemsEditor"></div>
+          <div class="form-grid three totals-inputs"><label><span data-ar="الضريبة %" data-en="Tax %">الضريبة %</span><input id="taxRate" type="number" min="0" step="0.01" value="0" /></label><label><span data-ar="الخصم" data-en="Discount">الخصم</span><input id="discount" type="number" min="0" step="0.01" value="0" /></label><label><span data-ar="الشحن/إضافات" data-en="Shipping/extra">الشحن/إضافات</span><input id="extraFee" type="number" min="0" step="0.01" value="0" /></label></div>
+          <label><span data-ar="ملاحظات وشروط" data-en="Notes & terms">ملاحظات وشروط</span><textarea id="invoiceNotes" rows="4" placeholder="Payment terms, validity, notes..."></textarea></label>
+          <div class="editor-actions"><button type="button" class="primary-btn" id="printInvoiceBtn" data-ar="طباعة / PDF" data-en="Print / PDF">طباعة / PDF</button><button type="button" class="secondary-btn" id="saveInvoiceBtn" data-ar="حفظ المسودة" data-en="Save draft">حفظ المسودة</button><button type="button" class="ghost-btn danger-lite" id="resetInvoiceBtn" data-ar="مسح" data-en="Reset">مسح</button></div>
+        </form>
+        <aside class="preview-panel"><div class="preview-label" data-ar="معاينة مباشرة" data-en="Live preview">معاينة مباشرة</div><div id="invoicePreview" class="document-preview"></div></aside>
+      </div>
+    </section>
+
+    <section id="compare" class="work-section shell section-anchor">
+      <div class="section-head compact-head"><div><span class="kicker">BUY SMARTER</span><h2 data-ar="مقارنة عروض الموردين" data-en="Supplier offer comparison">مقارنة عروض الموردين</h2><p data-ar="قارن التكلفة الفعلية والمدة والتقييم، وحدد العرض الأفضل بدل الاعتماد على السعر وحده." data-en="Compare landed cost, lead time and rating to find the best offer — not just the cheapest sticker price.">قارن التكلفة الفعلية والمدة والتقييم، وحدد العرض الأفضل بدل الاعتماد على السعر وحده.</p></div></div>
+      <div class="workspace compare-workspace">
+        <div class="editor-panel"><div class="form-grid two"><label><span data-ar="اسم الصنف / المشروع" data-en="Item / project">اسم الصنف / المشروع</span><input id="compareTitle" placeholder="مثال: 100 كرتونة خامة" /></label><label><span data-ar="العملة" data-en="Currency">العملة</span><select id="compareCurrency"><option>EGP</option><option>USD</option><option>AED</option><option>SAR</option><option>EUR</option></select></label></div><div class="panel-title"><span>⇄</span><b data-ar="العروض" data-en="Offers">العروض</b><button type="button" class="mini-btn" id="addSupplierBtn">+ <span data-ar="إضافة مورد" data-en="Add supplier">إضافة مورد</span></button></div><div id="supplierEditor" class="supplier-editor"></div><div class="editor-actions"><button type="button" class="primary-btn" id="exportCompareBtn" data-ar="تصدير CSV" data-en="Export CSV">تصدير CSV</button><button type="button" class="secondary-btn" id="printCompareBtn" data-ar="طباعة التقرير" data-en="Print report">طباعة التقرير</button><button type="button" class="ghost-btn danger-lite" id="resetCompareBtn" data-ar="مسح" data-en="Reset">مسح</button></div></div>
+        <aside class="preview-panel compare-preview-wrap"><div class="preview-label" data-ar="النتيجة" data-en="Result">النتيجة</div><div id="comparePreview" class="compare-preview"></div></aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer shell"><div><b>U</b><span data-ar="أدوات ويب عملية تعمل من المتصفح." data-en="Practical web tools that run in your browser.">أدوات ويب عملية تعمل من المتصفح.</span></div><p>Designed &amp; Developed by Mohammed Hussein · <a href="https://iegy.net/" target="_blank" rel="noopener"><strong>iegy.net</strong></a></p></footer>
+
+  <dialog id="toolDialog" class="tool-dialog"><div class="dialog-shell"><div class="dialog-head"><div><span class="dialog-tag">LOCAL TOOL</span><h3 id="dialogTitle">Tool</h3></div><button type="button" id="closeDialog" class="icon-btn" aria-label="إغلاق">×</button></div><div id="dialogBody" class="dialog-body"></div></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div><div id="printArea" class="print-area" aria-hidden="true"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
