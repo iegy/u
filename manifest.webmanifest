@@ -1,0 +1,20 @@
+{
+  "name": "U — Utility Studio",
+  "short_name": "U Tools",
+  "description": "Browser-first utility tools, invoices, quotations and supplier comparison.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3efe6",
+  "theme_color": "#101318",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
