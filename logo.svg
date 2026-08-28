@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 180" role="img" aria-labelledby="t d">
+  <title id="t">U Utility Studio</title>
+  <desc id="d">Utility Studio wordmark with the U utility tile.</desc>
+  <defs>
+    <linearGradient id="g" x1="20" y1="15" x2="160" y2="170" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#171A20"/>
+      <stop offset="1" stop-color="#0C0F14"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(4 4) scale(.33)">
+    <path d="M111 51C181 16 359 17 424 76c65 59 65 254 10 330-55 75-251 93-337 27C12 368 19 96 111 51Z" fill="url(#g)"/>
+    <path d="M154 147v121c0 94 43 139 105 139 65 0 111-48 111-142V147h-58v120c0 54-16 82-51 82-34 0-49-28-49-82V147h-58Z" fill="#F5F0E6"/>
+    <path d="M151 142h64" stroke="#D8FF63" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="395" cy="126" r="23" fill="#FF775F"/>
+    <circle cx="426" cy="208" r="14" fill="#74D8FF"/>
+    <circle cx="112" cy="333" r="18" fill="#AA91FF"/>
+    <circle cx="177" cy="425" r="12" fill="#7BE2B8"/>
+  </g>
+  <g fill="#15181D" font-family="Segoe UI,Arial,sans-serif">
+    <text x="190" y="86" font-size="58" font-weight="800" letter-spacing="-2">Utility Studio</text>
+    <text x="193" y="126" font-size="22" font-weight="600" fill="#6F706F" letter-spacing="2">SMALL TOOLS · SERIOUS WORK</text>
+  </g>
+</svg>
